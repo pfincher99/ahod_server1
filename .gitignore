@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+/drone_secrets.yml
+.gitignore
+.idea/
+drone_secrets.yml
