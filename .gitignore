@@ -3,3 +3,4 @@
 .gitignore
 .idea/
 drone_secrets.yml
+/drone.sh
