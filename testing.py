@@ -14,7 +14,7 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_correct_content(self):
         resp = self.app.get('/hello/world')
-        self.assertEquals(resp.data, '"Hello World!"\n')
+        self.assertEquals(resp.data, '"Hello World! Im working"\n')
 
     def tearDown(self):
         pass
