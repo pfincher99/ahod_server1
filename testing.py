@@ -8,13 +8,21 @@ class FlaskTestCase(unittest.TestCase):
         demoapp.app.config['TESTING'] = True
         self.app = demoapp.app.test_client()
 
-    def test_correct_http_response(self):
+    def test_correct_response(self):
         resp = self.app.get('/hello/world')
         self.assertEquals(resp.status_code, 200)
 
     def test_correct_content(self):
         resp = self.app.get('/hello/world')
         self.assertEquals(resp.data, '"Hello World! Im working"\n')
+
+    def test_alert_response(self):
+        resp = self.app.get('/alert')
+        self.assertEquals(resp.status_code, 200)
+
+    def test_alert_content(self):
+        resp = self.app.get('/alert')
+        self.assertEquals(resp.data, '"Alert Received"\n')
 
     def tearDown(self):
         pass

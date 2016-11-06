@@ -13,12 +13,12 @@ class HelloWorld(Resource):
 
 api.add_resource(HelloWorld, '/hello/world')
 
-class HelloUniverse(Resource):
+class Alert(Resource):
     def get(self):
-        text = "Hello Universe!"
+        text = "Alert Received"
         return text
 
-api.add_resource(HelloUniverse, '/hello/universe')
+api.add_resource(Alert, '/alert')
 
 if __name__ == '__main__':
     # Run Flask
