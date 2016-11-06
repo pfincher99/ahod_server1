@@ -12,5 +12,5 @@ ADD . /ahod_server1
 WORKDIR /ahod_server1
 RUN pip install --requirement /ahod_server1/requirements.txt
 
-CMD ["python", "test.py"]
+CMD ["python", "demoapp.py"]
 
