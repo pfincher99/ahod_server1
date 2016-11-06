@@ -3,7 +3,7 @@
 ##
 ## Pull base image.
 FROM python:2-alpine
-MAINTAINER Pete Fincher "pfincher@cisco.com"
+MAINTAINER Hank Preston "hapresto@cisco.com"
 EXPOSE 5000
 
 RUN pip install --no-cache-dir setuptools wheel
