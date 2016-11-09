@@ -15,6 +15,18 @@ publish:
         username: $$DOCKER_USERNAME
         password: $$DOCKER_PASSWORD
         email: $$DOCKER_EMAIL
+        when:
+            branch: "master"
+
+    docker:
+        repo: $$DOCKER_USERNAME/ahod_server1
+        tag: dev
+        username: $$DOCKER_USERNAME
+        password: $$DOCKER_PASSWORD
+        email: $$DOCKER_EMAIL
+        when:
+            branch: "dev"
+
 deploy:
     webhook:
         image: plugins/drone-webhook
@@ -25,3 +37,17 @@ deploy:
             password: $$MANTL_PASSWORD
         urls:
             - https://$$MANTL_CONTROL/marathon/v2/apps/ahod/pfincher99/restart?force=true
+        when:
+            branch: "master"
+
+    webhook:
+        image: plugins/drone-webhook
+        skip_verify: true
+        method: POST
+        auth:
+            username: $$MANTL_USERNAME
+            password: $$MANTL_PASSWORD
+        urls:
+            - https://$$MANTL_CONTROL/marathon/v2/apps/ahod/pfincher99-dev/restart?force=true
+        when:
+branch: "dev"
