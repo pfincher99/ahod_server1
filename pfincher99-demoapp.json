@@ -2,11 +2,11 @@
     "container": {
         "type": "DOCKER",
         "docker": {
-            "image": "pfincher99/ahod_server1:latest",
+            "image": "pfincher99/ahod_server1:dev",
             "forcePullImage": true,
             "network": "BRIDGE",
             "portMappings": [{
-                "containerPort": 5000,
+                "containerPort": 5001,
                 "hostPort": 0
             }]
         },
@@ -16,7 +16,7 @@
         "protocol": "TCP",
         "portIndex": 0
     }],
-    "id": "/ahod/pfincher99",
+    "id": "/ahod/pfincher99-dev",
     "instances": 1,
     "cpus": 0.1,
     "mem": 16,

@@ -8,3 +8,5 @@ drone_secrets.yml
 /app_uninstall.sh
 /sample-demoapp.json
 /example .drone.yml
+/pfincher99-demoapp.json
+/pfincher99-demoapp.json-master
