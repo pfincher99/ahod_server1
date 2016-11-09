@@ -37,8 +37,8 @@ deploy:
             password: $$MANTL_PASSWORD
         urls:
             - https://$$MANTL_CONTROL/marathon/v2/apps/ahod/pfincher99/restart?force=true
-    when:
-        branch: "master"
+        when:
+            branch: "master"
 
     webhook:
         image: plugins/drone-webhook
@@ -49,5 +49,5 @@ deploy:
             password: $$MANTL_PASSWORD
         urls:
             - https://$$MANTL_CONTROL/marathon/v2/apps/ahod/pfincher99-dev/restart?force=true
-    when:
-        branch: "dev"
+        when:
+            branch: "dev"
