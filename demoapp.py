@@ -23,3 +23,5 @@ api.add_resource(Alert, '/alert')
 if __name__ == '__main__':
     # Run Flask
     app.run(debug=True, host='0.0.0.0', port=int("5000"))
+
+# adding code to test dev branch deployment
