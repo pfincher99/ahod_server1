@@ -15,6 +15,18 @@ publish:
         username: $$DOCKER_USERNAME
         password: $$DOCKER_PASSWORD
         email: $$DOCKER_EMAIL
+        when:
+            branch: "master"
+
+    docker:
+        repo: $$DOCKER_USERNAME/ahod_server1
+        tag: dev
+        username: $$DOCKER_USERNAME
+        password: $$DOCKER_PASSWORD
+        email: $$DOCKER_EMAIL
+        when:
+            branch: "dev"
+
 deploy:
     webhook:
         image: plugins/drone-webhook

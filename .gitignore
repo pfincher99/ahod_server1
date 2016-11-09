@@ -7,3 +7,4 @@ drone_secrets.yml
 /app_install.sh
 /app_uninstall.sh
 /sample-demoapp.json
+/example .drone.yml
