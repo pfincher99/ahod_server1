@@ -19,17 +19,17 @@ def create_db():
         conn = sqlite3.connect(db_loc)
         cur = conn.cursor()
         cur.execute('''
-    CREATE TABLE Devices (
-        id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-        switchName	TEXT,
-        message		TEXT,
-        plcName		TEXT,
-        plcDataPoint	TEXT,
-        plcLocation	TEXT,
-        plcIp		TEXT
-    )
-    ''')
-    cur.close()
+        CREATE TABLE Devices (
+            id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+            switchName	TEXT,
+            message		TEXT,
+            plcName		TEXT,
+            plcDataPoint	TEXT,
+            plcLocation	TEXT,
+            plcIp		TEXT
+        )
+        ''')
+        cur.close()
 
 
 ## Flask Server
