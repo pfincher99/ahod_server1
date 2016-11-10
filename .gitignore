@@ -10,3 +10,4 @@ drone_secrets.yml
 /example .drone.yml
 /pfincher99-demoapp.json
 /pfincher99-demoapp.json-master
+/ahod.db

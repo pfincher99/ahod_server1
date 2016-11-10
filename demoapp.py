@@ -61,9 +61,29 @@ api.add_resource(Alert, '/alert')
 # API code for ahod web server
 @app.route("/ahod", methods=['GET'])
 def validate():
-    #return jsonify("RESPONSE TO GET")
-    return jsonify({"version":"1.0 ","switchName":"info0","message":"info1","plcInfo":{"plcName":"info2","plcDataPoint":"info3","plcLocation":"info4","plcIp":"info5"}})
+    #return jsonify({"version":"1.0 ","switchName":"info0","message":"info1","plcInfo":{"plcName":"info2","plcDataPoint":"info3","plcLocation":"info4","plcIp":"info5"}})
+    conn = sqlite3.connect(db_loc)
+    cur = conn.cursor()
+    cur.execute('''SELECT switchName, message, plcName, plcDataPoint, plcLocation, plcIp FROM Devices''')
+    result = cur.fetchall()
 
+    for response in result:
+         switchName = response[0]
+         switchName = str(switchName)
+         message = response[1]
+         message = str(message)
+         plcName = response[2]
+         plcName = str(plcName)
+         plcDataPoint = response[3]
+         plcDataPoint = str(plcDataPoint)
+         plcLocation = response[4]
+         plcLocation = str(plcLocation)
+         plcIp = response[5]
+         plcIp = str(plcIp)
+         return jsonify({"version": "1.0 ", "switchName": switchName, "message": message,
+                         "plcInfo": {"plcName": plcName, "plcDataPoint": plcDataPoint, "plcLocation": plcLocation,
+                                     "plcIp": plcIp}})
+    cur.close()
 
 @app.route("/ahod", methods=['POST'])
 def receiver():
