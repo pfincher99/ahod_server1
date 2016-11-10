@@ -6,7 +6,7 @@ import json
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 
-db_loc = "/ahod.db"
+db_loc = "ahod.db"
 
 
 def create_db():
@@ -87,12 +87,12 @@ def parse_all():
     print info['plcInfo']['plcLocation']
     print info['plcInfo']['plcIp']
 
-    switchName = ['switchName']
-    message = ['message']
-    plcName = ['plcInfo']['plcName']
-    plcDataPoint = ['plcInfo']['plcDataPoint']
-    plcLocation = ['plcInfo']['plcLocation']
-    plcIp = ['plcInfo']['plcIp']
+    switchName = info['switchName']
+    message = info['message']
+    plcName = info['plcInfo']['plcName']
+    plcDataPoint = info['plcInfo']['plcDataPoint']
+    plcLocation = info['plcInfo']['plcLocation']
+    plcIp = info['plcInfo']['plcIp']
     cur.execute('''
         INSERT INTO devices
         (switchName, message, plcName, plcDataPoint, plcLocation, plcIp )
