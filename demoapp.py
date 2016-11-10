@@ -61,7 +61,8 @@ api.add_resource(Alert, '/alert')
 # API code for ahod web server
 @app.route("/ahod", methods=['GET'])
 def validate():
-    return jsonify("RESPONSE TO GET")
+    #return jsonify("RESPONSE TO GET")
+    return jsonify({"version":"1.0 ","switchName":"info0","message":"info1","plcInfo":{"plcName":"info2","plcDataPoint":"info3","plcLocation":"info4","plcIp":"info5"}})
 
 
 @app.route("/ahod", methods=['POST'])
