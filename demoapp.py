@@ -103,3 +103,4 @@ def parse_all():
 if __name__ == '__main__':
     port = 5000  # the custom port you want
     app.run(host='0.0.0.0', port=port)
+    app.debug = True
