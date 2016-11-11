@@ -8,7 +8,7 @@ build:
         commands:
             - pip install -r requirements.txt
             - export SPARK_TOKEN=$$SPARK_TOKEN
-            - EXPORT SPARK_ROOM=$$SPARK_ROOM
+            - export SPARK_ROOM=$$SPARK_ROOM
             - python testing.py
 
 publish:
