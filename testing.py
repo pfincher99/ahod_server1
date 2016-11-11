@@ -2,9 +2,6 @@ import demoapp
 import unittest
 import os
 
-room_id = os.environ["SPARK_ROOM"]
-spark_token = "Bearer " + os.environ["SPARK_TOKEN"]
-
 class FlaskTestCase(unittest.TestCase):
 
     def setUp(self):
