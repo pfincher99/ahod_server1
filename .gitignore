@@ -11,3 +11,8 @@ drone_secrets.yml
 /pfincher99-demoapp.json
 /pfincher99-demoapp.json-master
 /ahod.db
+/instal.sh
+/instal-dev.json
+/pfincher99-instal-dev.json
+pfincher99-instal-dev.json
+venv/

@@ -9,11 +9,11 @@ from flask_restful import Resource, Api
 
 db_loc = "ahod.db"
 
-# Spark information
-room_url = 'https://api.ciscospark.com/v1/messages'
-# Spark room and token variables are stored in drone_secrets
-room_id = os.environ['SPARK_ROOM']
-spark_token = "Bearer " + os.environ['SPARK_TOKEN']
+# # Spark information
+# room_url = 'https://api.ciscospark.com/v1/messages'
+# # Spark room and token variables are stored in drone_secrets
+# room_id = os.environ['SPARK_ROOM']
+# spark_token = "Bearer " + os.environ['SPARK_TOKEN']
 
 
 def create_db():
