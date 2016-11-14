@@ -42,7 +42,7 @@ deploy:
             username: $$MANTL_USERNAME
             password: $$MANTL_PASSWORD
         urls:
-            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/server/restart?force=true
+            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/iot-server/restart?force=true
         when:
             branch: "master"
 
@@ -57,6 +57,6 @@ deploy:
             username: $$MANTL_USERNAME
             password: $$MANTL_PASSWORD
         urls:
-            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/server-dev/restart?force=true
+            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/iot-server-dev/restart?force=true
         when:
             branch: "dev"

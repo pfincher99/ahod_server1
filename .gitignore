@@ -4,15 +4,7 @@
 .idea/
 drone_secrets.yml
 /drone.sh
-/app_install.sh
-/app_uninstall.sh
-/sample-demoapp.json
-/example .drone.yml
 /pfincher99-demoapp.json
-/pfincher99-demoapp.json-master
 /ahod.db
-/instal.sh
-/instal-dev.json
-/pfincher99-instal-dev.json
-pfincher99-instal-dev.json
 venv/
+
