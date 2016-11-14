@@ -15,6 +15,7 @@ db_loc = "ahod.db"
 # room_id = os.environ['SPARK_ROOM']
 # spark_token = "Bearer " + os.environ['SPARK_TOKEN']
 
+
 def create_db():
     global conn, cur
     # check to see if db exists, if not, create
