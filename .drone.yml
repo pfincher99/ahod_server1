@@ -32,6 +32,9 @@ publish:
 
 deploy:
     webhook:
+        commands:
+            - export SPARK_TOKEN=$$SPARK_TOKEN
+            - export SPARK_ROOM=$$SPARK_ROOM
         image: plugins/drone-webhook
         skip_verify: true
         method: POST
@@ -44,6 +47,9 @@ deploy:
             branch: "master"
 
     webhook:
+        commands:
+            - export SPARK_TOKEN=$$SPARK_TOKEN
+            - export SPARK_ROOM=$$SPARK_ROOM
         image: plugins/drone-webhook
         skip_verify: true
         method: POST
