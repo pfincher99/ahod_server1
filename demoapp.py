@@ -70,21 +70,20 @@ def validate():
     # return jsonify({"version":"1.0 ","switchName":"info0","message":"info1","plcInfo":{"plcName":"info2","plcDataPoint":"info3","plcLocation":"info4","plcIp":"info5"}})
     conn = sqlite3.connect(db_loc)
     cur = conn.cursor()
-    cur.execute('''SELECT switchName, message, plcName, plcDataPoint, plcLocation, plcIp FROM Devices''')
-    result = cur.fetchall()
+    cur.execute('''SELECT * FROM Devices ORDER BY id DESC''') #DESC Orders by latest first
 
-    for response in result:
-        switchName = response[0]
+    for response in cur:
+        switchName = response[1]
         switchName = str(switchName)
-        message = response[1]
+        message = response[2]
         message = str(message)
-        plcName = response[2]
+        plcName = response[3]
         plcName = str(plcName)
-        plcDataPoint = response[3]
+        plcDataPoint = response[4]
         plcDataPoint = str(plcDataPoint)
-        plcLocation = response[4]
+        plcLocation = response[5]
         plcLocation = str(plcLocation)
-        plcIp = response[5]
+        plcIp = response[6]
         plcIp = str(plcIp)
         return jsonify({"version": "1.0 ", "switchName": switchName, "message": message,
                         "plcInfo": {"plcName": plcName, "plcDataPoint": plcDataPoint, "plcLocation": plcLocation,
