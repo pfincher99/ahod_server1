@@ -2,10 +2,7 @@
 /drone_secrets.yml
 .gitignore
 .idea/
-drone_secrets.yml
 /drone.sh
 /pfincher99-demoapp.json
 /ahod.db
 venv/
-/.drone.yml
-/.drone.sec
