@@ -67,7 +67,6 @@ api.add_resource(Alert, '/alert')
 # API code for ahod web server
 @app.route("/ahod", methods=['GET'])
 def validate():
-    # return jsonify({"version":"1.0 ","switchName":"info0","message":"info1","plcInfo":{"plcName":"info2","plcDataPoint":"info3","plcLocation":"info4","plcIp":"info5"}})
     conn = sqlite3.connect(db_loc)
     cur = conn.cursor()
     cur.execute('''SELECT * FROM Devices ORDER BY id DESC''') #DESC Orders by latest first
