@@ -25,12 +25,8 @@ echo "What is the spark room id?  "
 read spark_room
 echo
 
-#export MANTL_CONTROL="$control_address"
-#export MANTL_USER="$mantl_user"
-#export MANTL_PASSWORD="$mantl_password"
-
-#echo "Marathon API calls will be sent to: "
-#echo "https://$MANTL_CONTROL:8080/"
+export SPARK_TOKEN="$spark_token"
+export SPARK_ROOM="$spark_room"
 
 cp sample-demoapp.json $docker_username-demoapp.json
 sed -i "" -e "s/DOCKERUSER/$docker_username/g" $docker_username-demoapp.json
