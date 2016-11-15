@@ -137,7 +137,7 @@ def plc_data():
     plcLocation = info['plcInfo']['plcLocation']
     plcIp = info['plcInfo']['plcIp']
     cur.execute('''
-        INSERT INTO devices
+        INSERT INTO Devices
         (switchName, message, plcName, plcDataPoint, plcLocation, plcIp )
         VALUES (?, ?, ?, ?, ?, ? )''', (switchName, message, plcName, plcDataPoint, plcLocation, plcIp))
     conn.commit()
