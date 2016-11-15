@@ -8,3 +8,4 @@ drone_secrets.yml
 /ahod.db
 venv/
 /.drone.yml
+/.drone.sec
