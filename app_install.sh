@@ -25,11 +25,10 @@ echo "What is the spark room id?  "
 read spark_room
 echo
 
-export SPARK_TOKEN=$spark_token
-export SPARK_ROOM=$spark_room
-
 cp sample-demoapp.json $docker_username-demoapp.json
 sed -i "" -e "s/DOCKERUSER/$docker_username/g" $docker_username-demoapp.json
+sed -i "" -e "s/SPARK_TOKEN/$spark_token/g" $docker_username-demoapp.json
+sed -i "" -e "s/SPARK_ROOM/$spark_room/g" $docker_username-demoapp.json
 
 echo " "
 echo "***************************************************"

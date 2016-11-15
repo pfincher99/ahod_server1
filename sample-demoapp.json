@@ -21,7 +21,7 @@
     "cpus": 0.1,
     "mem": 16,
     "env": {
-        "SPARK_TOKEN":"$spark_token",
-        "SPARK_ROOM":"$spark_room"
+        "SPARK_TOKEN":"SPARK_TOKEN",
+        "SPARK_ROOM":"SPARK_ROOM"
     }
 }
