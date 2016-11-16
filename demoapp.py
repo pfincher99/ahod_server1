@@ -55,7 +55,7 @@ api.add_resource(HelloWorld, '/hello/world')
 
 class Alert(Resource):
     def get(self):
-        text = "Alert Received"
+        text = "Alert Received on Dev Branch"
         return text
 
 
