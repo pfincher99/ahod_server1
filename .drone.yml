@@ -8,6 +8,7 @@ build:
         commands:
             - pip install -r requirements.txt
             - python testing.py
+
 publish:
     docker:
         repo: $$DOCKER_USERNAME/ahod_server1
@@ -36,7 +37,7 @@ deploy:
             username: $$MANTL_USERNAME
             password: $$MANTL_PASSWORD
         urls:
-            - https://$$MANTL_CONTROL/marathon/v2/apps/ahod/pfincher99/restart?force=true
+            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/ahod-server/restart?force=true
         when:
             branch: "master"
 
@@ -48,6 +49,6 @@ deploy:
             username: $$MANTL_USERNAME
             password: $$MANTL_PASSWORD
         urls:
-            - https://$$MANTL_CONTROL/marathon/v2/apps/ahod/pfincher99-dev/restart?force=true
+            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/ahod-server-dev/restart?force=true
         when:
-branch: "dev"
+            branch: "dev"

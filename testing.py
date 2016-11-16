@@ -1,6 +1,6 @@
 import demoapp
 import unittest
-
+import os
 
 class FlaskTestCase(unittest.TestCase):
 
@@ -14,7 +14,7 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_correct_content(self):
         resp = self.app.get('/hello/world')
-        self.assertEquals(resp.data, '"Hello World! This is the master branch"\n')
+        self.assertEquals(resp.data, '"Hello World! This is the dev branch"\n')
 
     def test_alert_response(self):
         resp = self.app.get('/alert')
@@ -22,7 +22,7 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_alert_content(self):
         resp = self.app.get('/alert')
-        self.assertEquals(resp.data, '"Alert Received. This is the master branch"\n')
+        self.assertEquals(resp.data, '"Alert Received on Dev Branch"\n')
 
     def tearDown(self):
         pass
