@@ -46,7 +46,7 @@ api = Api(app)
 # Start: Hello world code not used for API only for testing at this stage
 class HelloWorld(Resource):
     def get(self):
-        text = "Hello World! This is the dev branch"
+        text = "Hello World! This is the Master branch"
         return text
 
 

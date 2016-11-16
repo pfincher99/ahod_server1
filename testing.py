@@ -14,7 +14,7 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_correct_content(self):
         resp = self.app.get('/hello/world')
-        self.assertEquals(resp.data, '"Hello World! This is the dev branch"\n')
+        self.assertEquals(resp.data, '"Hello World! This is the Master branch"\n')
 
     def test_alert_response(self):
         resp = self.app.get('/alert')
