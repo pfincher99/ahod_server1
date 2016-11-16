@@ -5,3 +5,4 @@
 /drone.sh
 /ahod.db
 venv/
+/demoapp_local.py
