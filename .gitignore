@@ -3,6 +3,5 @@
 .gitignore
 .idea/
 /drone.sh
-/pfincher99-demoapp.json
 /ahod.db
 venv/
