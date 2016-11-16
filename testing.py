@@ -22,7 +22,7 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_alert_content(self):
         resp = self.app.get('/alert')
-        self.assertEquals(resp.data, '"Alert Received"\n')
+        self.assertEquals(resp.data, '"Alert Received. This is the master branch"\n')
 
     def tearDown(self):
         pass

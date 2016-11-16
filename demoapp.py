@@ -14,7 +14,7 @@ api.add_resource(HelloWorld, '/hello/world')
 
 class Alert(Resource):
     def get(self):
-        text = "Alert Received"
+        text = "Alert Received. This is the master branch"
         return text
 
 api.add_resource(Alert, '/alert')
