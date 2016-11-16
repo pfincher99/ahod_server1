@@ -106,11 +106,11 @@ def post_spark():
     print room_id
     print spark_token
     headers = {'content-type': 'application/json', 'Authorization': spark_token}
-    data = "test from flask server"
-    #data = "**Switch:** " + switchName + "\n- **PLC:** " + plcName + "\n- **PLC Data Point:** " + plcDataPoint + "\n- **PLC Location:** " + plcLocation + "\n- **PLC IP Address:** " + plcIp + "\n- **Message:** " + message
+    #data = "test from flask server"
+    data = "**Switch:** " + switchName + "\n- **PLC:** " + plcName + "\n- **PLC Data Point:** " + plcDataPoint + "\n- **PLC Location:** " + plcLocation + "\n- **PLC IP Address:** " + plcIp + "\n- **Message:** " + message
     payload_json1 = {
-        "rooId": room_id,
-        "text": data
+        "roomId": room_id,
+        "markdown": data
     }
     print payload_json1
     requests.post(room_url, headers=headers, data=json.dumps(payload_json1))
