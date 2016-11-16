@@ -11,8 +11,8 @@ db_loc = "ahod.db"
 
 # Spark information
 room_url = 'https://api.ciscospark.com/v1/messages'
-room_id = os.getenv("SPARK_ROOM")
-token = os.getenv("SPARK_TOKEN")
+room_id = os.getenv("spark_room")
+token = os.getenv("spark_token")
 spark_token = "Bearer "+str(token)
 
 def create_db():
