@@ -2,8 +2,7 @@
 /drone_secrets.yml
 .gitignore
 .idea/
-drone_secrets.yml
 /drone.sh
-/app_install.sh
-/app_uninstall.sh
-/sample-demoapp.json
+/ahod.db
+venv/
+/demoapp_local.py
