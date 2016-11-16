@@ -109,7 +109,7 @@ def post_spark():
     data = "test from flask server"
     #data = "**Switch:** " + switchName + "\n- **PLC:** " + plcName + "\n- **PLC Data Point:** " + plcDataPoint + "\n- **PLC Location:** " + plcLocation + "\n- **PLC IP Address:** " + plcIp + "\n- **Message:** " + message
     payload_json1 = {
-        "roomId": room_id,
+        "rooId": room_id,
         "text": data
     }
     print payload_json1
