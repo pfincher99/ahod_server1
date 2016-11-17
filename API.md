@@ -1,11 +1,13 @@
-## POST IMAPEX AHOD Master Post 
+# All Hands On Deck IoT Demo - API
+
+### POST
 
 `http://imapex-ahod-ahod-server.green.browndogtech.com/ahod`
 
-## HEADERS
+### HEADERS
 **Content-Type**        application/json
 
-## BODY
+### BODY
 `
 {
   "message": "string",
