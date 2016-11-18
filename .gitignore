@@ -3,6 +3,4 @@
 .gitignore
 .idea/
 /drone.sh
-/ahod.db
-venv/
-/demoapp_local.py
+/testing_local.py
