@@ -7,6 +7,8 @@ build:
         image: python:2-alpine
         commands:
             - pip install -r requirements.txt
+            - export spark_token=$$spark_token
+            - export spark_room=$$spark_room
             - python testing.py
 
 publish:
