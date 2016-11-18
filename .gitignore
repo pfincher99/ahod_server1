@@ -4,3 +4,5 @@
 .idea/
 /drone.sh
 /testing_local.py
+/local_testing.py
+/local_env.sh
