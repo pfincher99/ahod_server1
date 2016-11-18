@@ -1,6 +1,7 @@
 import demoapp
 import unittest
 import os
+import requests
 
 class FlaskTestCase(unittest.TestCase):
 
@@ -21,6 +22,16 @@ class FlaskTestCase(unittest.TestCase):
     def test_db_exist(self):
         database = os.path.isfile('ahod.db')
         self.assertEquals(database,True)
+
+    # Test to confirm Spark Room Exists
+    def test_spark(self):
+        room_id = os.getenv("spark_room")
+        room_url = 'https://api.ciscospark.com/v1/rooms/'+room_id
+        token = os.getenv("spark_token")
+        spark_token = "Bearer " + str(token)
+        headers = {'content-type': 'application/json', 'Authorization': spark_token}
+        resp = requests.get(room_url, headers=headers)
+        self.assertEquals(resp.status_code, 200)
 
     def tearDown(self):
         pass
