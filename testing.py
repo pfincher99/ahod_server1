@@ -27,7 +27,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_spark(self):
         print('In test_spark()')
         room_id = os.getenv("spark_room")
-        room_url = 'https://api.ciscospark.com/v1/rooms/'+room_id
+        room_url = 'https://api.ciscospark.com/v1/rooms/'+str(room_id)
         print ('URL '+str(room_url))
         token = os.getenv("spark_token")
         spark_token = "Bearer " + str(token)
