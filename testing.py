@@ -31,7 +31,7 @@ class FlaskTestCase(unittest.TestCase):
         spark_token = "Bearer " + str(token)
         headers = {'content-type': 'application/json', 'Authorization': str(spark_token)}
         resp = requests.get(room_url, headers=headers)
-        self.assertEquals(resp.status_code, 200)
+        self.assertEquals(resp.status_code, 200, msg='{0}, {1}')
 
     def tearDown(self):
         pass
