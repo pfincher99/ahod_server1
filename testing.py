@@ -26,7 +26,7 @@ class FlaskTestCase(unittest.TestCase):
     # Test to confirm Spark Room Exists
     def test_spark(self):
         room_id = os.getenv("spark_room")
-        room_url = 'https://api.ciscospark.com/v1/rooms/'+room_id
+        room_url = 'https://api.ciscospark.com/v1/rooms/'+str(room_id)
         token = os.getenv("spark_token")
         spark_token = "Bearer " + str(token)
         headers = {'content-type': 'application/json', 'Authorization': spark_token}
