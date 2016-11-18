@@ -1,7 +1,6 @@
 import demoapp
 import unittest
 import os
-import requests
 
 class FlaskTestCase(unittest.TestCase):
 
