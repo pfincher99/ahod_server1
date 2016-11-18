@@ -100,7 +100,7 @@ def receiver():
     post_spark()
     return jsonify(result={"status": 200})
 
-
+# Code to get the SIP URI of the Spark Room
 @app.route("/uri", methods=['GET'])
 def get_sip_uri():
     global room_id, spark_token, sip_addr
