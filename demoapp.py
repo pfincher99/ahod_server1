@@ -96,9 +96,23 @@ def receiver():
     create_db()
     post_data = request.get_data()
     plc_data()
+    get_sip_uri()
     post_spark()
     return jsonify(result={"status": 200})
 
+@app.route("/uri", methods=['GET'])
+def get_sip_uri():
+    global room_id, spark_token, sip_addr
+    get_room_url = 'https://api.ciscospark.com/v1/rooms/' + room_id
+    headers = {'content-type':'application/json','Authorization': spark_token}
+    payload = {'showSipAddress': 'true'}
+    spark_post = requests.get(get_room_url, headers=headers, params=payload)
+    conv_response_json = spark_post.json()
+    # print statements included to debug in the console
+    print conv_response_json
+    ## this is where I grab the SIP URI from the JSON response
+    sip_addr = conv_response_json['sipAddress']
+    return sip_addr
 
 def post_spark():
     global room_url, switchName, message, plcName, plcDataPoint, plcLocation, plcIp
