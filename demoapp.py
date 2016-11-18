@@ -114,6 +114,7 @@ def get_sip_uri():
     sip_addr = conv_response_json['sipAddress']
     return sip_addr
 
+
 def post_spark():
     global room_url, switchName, message, plcName, plcDataPoint, plcLocation, plcIp
     print "post data to Spark"
