@@ -8,14 +8,7 @@ class FlaskTestCase(unittest.TestCase):
         demoapp.app.config['TESTING'] = True
         self.app = demoapp.app.test_client()
 
-    def test_correct_response(self):
-        resp = self.app.get('/hello/world')
-        self.assertEquals(resp.status_code, 200)
-
-    def test_correct_content(self):
-        resp = self.app.get('/hello/world')
-        self.assertEquals(resp.data, '"Hello World! This is the Master branch"\n')
-
+    # Test to confirm Flask is running
     def test_alert_response(self):
         resp = self.app.get('/alert')
         self.assertEquals(resp.status_code, 200)
@@ -23,6 +16,11 @@ class FlaskTestCase(unittest.TestCase):
     def test_alert_content(self):
         resp = self.app.get('/alert')
         self.assertEquals(resp.data, '"Alert Received on Master Branch"\n')
+
+    # Test to confirm that the initial database exists
+    def test_db_exist(self):
+        database = os.path.isfile('ahod.db')
+        self.assertEquals(database,True)
 
     def tearDown(self):
         pass
