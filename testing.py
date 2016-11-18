@@ -25,13 +25,17 @@ class FlaskTestCase(unittest.TestCase):
 
     # Test to confirm Spark Room Exists
     def test_spark(self):
+        print('In test_spark()')
         room_id = os.getenv("spark_room")
-        room_url = 'https://api.ciscospark.com/v1/rooms/'+str(room_id)
+        room_url = 'https://api.ciscospark.com/v1/rooms/'+room_id
+        print ('URL '+str(room_url))
         token = os.getenv("spark_token")
         spark_token = "Bearer " + str(token)
-        headers = {'content-type': 'application/json', 'Authorization': str(spark_token)}
+        print ('Spark Token '+str(spark_token))
+        headers = {'content-type': 'application/json', 'Authorization': spark_token}
+        print('Headers '+str(headers))
         resp = requests.get(room_url, headers=headers)
-        self.assertEquals(resp.status_code, 200, msg='{0}, {1}')
+        self.assertEquals(resp.status_code, 200)
 
     def tearDown(self):
         pass
